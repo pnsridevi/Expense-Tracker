@@ -1,0 +1,359 @@
+Expenses.css
+
+/* ── Page ── */
+.expense-page {
+  padding: 2rem 2.5rem;
+  max-width: 1100px;
+  min-height: 100vh;
+}
+
+/* ── Top row ── */
+.expense-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 0.4rem;
+  gap: 1rem;
+}
+
+.expense-top h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-text-heading);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.expense-subtitle {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  margin: 0 0 1.75rem;
+}
+
+/* ── Success message ── */
+.success-msg {
+  font-size: 0.875rem;
+  color: var(--color-primary);
+  background: #f0fdfa;
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  padding: 0.6rem 1rem;
+  margin-bottom: 1.25rem;
+}
+
+/* ── Form ── */
+.expenses-form {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.expenses-form-bar {
+  height: 4px;
+  background: var(--gradient-main);
+}
+
+.expenses-form-inner {
+  padding: 1.5rem;
+}
+
+.expenses-form-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-heading);
+  margin: 0 0 1.25rem;
+}
+
+/* ── Form grid ── */
+.form-row-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+/* Full width field */
+.form-data-full {
+  grid-column: 1 / -1;
+}
+
+/* ── Form fields ── */
+.form-data {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.form-data label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--color-text-muted);
+}
+
+.form-data input,
+.form-data select {
+  padding: 0.6rem 0.875rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  color: var(--color-text-heading);
+  background: var(--color-input-bg);
+  outline: none;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.form-data input::placeholder {
+  color: var(--color-text-faint);
+}
+
+.form-data input:focus,
+.form-data select:focus {
+  border-color: var(--color-border-focus);
+  box-shadow: var(--shadow-focus);
+  background: var(--color-card);
+}
+
+.form-data select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ── Field error ── */
+.field-error {
+  font-size: 0.75rem;
+  color: var(--color-error);
+  margin: 0;
+}
+
+/* ── Submit button ── */
+.btn-submit {
+  padding: 0.6rem 1.5rem;
+  background: var(--gradient-btn);
+  color: var(--color-card);
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn-submit:hover {
+  opacity: 0.88;
+}
+
+/* ── Section label ── */
+.section-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-primary-mid);
+  margin-bottom: 0.75rem;
+}
+
+/* ── Empty state ── */
+.empty-text {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 3rem 0;
+}
+
+/* ── Loading / Error ── */
+.expenses-loading,
+.expense-error {
+  padding: 3rem 2.5rem;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.expenses-error {
+  color: var(--color-error);
+}
+
+/* ── Table wrapper ── */
+.table-wrapper {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+/* ── Transactions table ── */
+.transactions-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.transactions-table thead tr {
+  background: var(--color-bg-subtle);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.transactions-table th {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.transactions-table tbody tr {
+  border-bottom: 1px solid var(--color-border-light);
+  transition: background 0.15s;
+}
+
+.transactions-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.transactions-table tbody tr:hover {
+  background: var(--color-bg-subtle);
+}
+
+.transactions-table td {
+  padding: 0.75rem 1rem;
+  color: var(--color-text-dark);
+  vertical-align: middle;
+}
+
+/* ── Amount cell ── */
+.amount-cell {
+  font-weight: 600;
+  color: var(--color-text-heading) !important;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Description cell ── */
+.desc-cell {
+  max-width: 180px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--color-text-mid) !important;
+  font-size: 0.82rem;
+}
+
+/* ── Actions cell ── */
+.actions-cell {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+/* ── Edit button ── */
+.btn-edit {
+  background: none;
+  border: none;
+  font-size: 0.78rem;
+  color: var(--color-primary-mid);
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.btn-edit:hover {
+  color: var(--color-primary);
+}
+
+/* ── Delete button ── */
+.btn-delete {
+  background: none;
+  border: none;
+  font-size: 0.78rem;
+  color: var(--color-purple);
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.btn-delete:hover {
+  color: var(--color-error);
+}
+
+/* ── Form actions row ── */
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* ── Cancel button ── */
+.btn-cancel {
+  padding: 0.6rem 1.5rem;
+  background: none;
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    border-color 0.2s,
+    color 0.2s;
+}
+
+.btn-cancel:hover {
+  border-color: var(--color-error);
+  color: var(--color-error);
+}
+
+/* ── Modal overlay ── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.modal-box {
+  background: var(--color-card);
+  border-radius: var(--radius-lg);
+  width: 90%;
+  max-width: 680px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-card);
+}
+
+.refresh-hint {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  margin: 0 0 0.75rem;
+  animation: pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+.btn-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.edit-inline-row {
+  background: var(--color-input-bg);
+}

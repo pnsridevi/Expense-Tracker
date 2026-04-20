@@ -1,0 +1,258 @@
+.settings-page {
+  padding: 2rem 2.5rem;
+  max-width: 900px;
+  min-height: 100vh;
+}
+
+/* ── Top row ── */
+.settings-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 0.4rem;
+  gap: 1rem;
+}
+
+.settings-top h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-text-heading);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.settings-subtitle {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  margin: 0 0 1.75rem;
+}
+
+/* ── Toggle button ── */
+.btn-toggle {
+  padding: 0.6rem 1.4rem;
+  background: var(--gradient-main);
+  color: var(--color-card);
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+}
+
+.btn-toggle:hover {
+  opacity: 0.88;
+}
+
+/* ── Section label ── */
+.section-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-primary-mid);
+  margin-bottom: 0.75rem;
+}
+
+/* ── Add form ── */
+.settings-form {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.settings-form-bar {
+  height: 4px;
+  background: var(--gradient-main);
+}
+
+.settings-form-inner {
+  padding: 1.5rem;
+}
+
+.settings-form-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-heading);
+  margin: 0 0 1.25rem;
+}
+
+/* ── Form grid ── */
+.form-row-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+/* ── Form fields ── */
+.form-data {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.form-data label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--color-text-muted);
+}
+
+.form-data input,
+.form-data select {
+  padding: 0.6rem 0.875rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  color: var(--color-text-heading);
+  background: var(--color-input-bg);
+  outline: none;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.form-data input::placeholder {
+  color: var(--color-text-faint);
+}
+
+.form-data input:focus,
+.form-data select:focus {
+  border-color: var(--color-border-focus);
+  box-shadow: var(--shadow-focus);
+  background: var(--color-card);
+}
+
+/* ── Field error ── */
+.field-error {
+  font-size: 0.75rem;
+  color: var(--color-error);
+  margin: 0;
+}
+
+/* ── Save button ── */
+.btn-submit {
+  padding: 0.6rem 1.5rem;
+  background: var(--gradient-btn);
+  color: var(--color-card);
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn-submit:hover {
+  opacity: 0.88;
+}
+
+/* ── Empty state ── */
+.empty-text {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 3rem 0;
+}
+
+/* ── Sources grid ── */
+.sources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* ── Source card ── */
+.source-card {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition:
+    box-shadow 0.2s,
+    transform 0.2s;
+}
+
+.source-card:hover {
+  box-shadow: var(--shadow-card);
+  transform: translateY(-2px);
+}
+
+.source-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.4rem;
+}
+
+.source-nickname {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text-heading);
+}
+
+.source-type {
+  font-size: 0.68rem;
+  text-transform: capitalize;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-weight: 500;
+  background: #eef4fb;
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
+}
+
+.source-bank {
+  font-size: 0.8rem;
+  color: var(--color-primary-mid);
+  margin: 0 0 0.2rem;
+}
+
+.source-detail {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin: 0;
+  font-family: monospace;
+  letter-spacing: 0.04em;
+}
+
+.btn-delete {
+  background: none;
+  border: none;
+  font-size: 0.78rem;
+  color: var(--color-purple);
+  cursor: pointer;
+  padding: 0;
+  margin-top: 0.75rem;
+  display: inline-block;
+  transition: color 0.2s;
+}
+
+.btn-delete:hover {
+  color: var(--color-primary);
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .settings-page {
+    padding: 1.25rem 1rem;
+  }
+  .settings-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .form-row-grid {
+    grid-template-columns: 1fr;
+  }
+  .sources-grid {
+    grid-template-columns: 1fr;
+  }
+}

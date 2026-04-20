@@ -1,0 +1,123 @@
+.register-page {
+  min-height: 100vh;
+  background: var(--color-page-grad);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── form-card, form-data, field-error, buttons,
+   btn-submit, server-error are all shared with
+   Home.css — no duplication needed if you move
+   them to index.css. For now they are repeated
+   here so Register works standalone. ── */
+
+.form-card {
+  width: 100%;
+  max-width: 420px;
+  background: var(--color-card);
+  border-radius: var(--radius-xl);
+  padding: 40px 36px;
+  margin: auto;
+  margin-top: 60px;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--color-border);
+}
+
+.form-card h2 {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--color-text-dark);
+  margin-bottom: 20px;
+  line-height: 1.35;
+}
+
+.form-data {
+  margin-bottom: 18px;
+}
+
+.form-data label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-text-mid);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.form-data input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  color: var(--color-text-dark);
+  outline: none;
+  background: var(--color-input-bg);
+  transition: all 0.2s;
+}
+
+.form-data input:focus {
+  border-color: var(--color-border-focus);
+  background: var(--color-card);
+  box-shadow: var(--shadow-focus);
+}
+
+.field-error {
+  color: var(--color-error);
+  font-size: 12px;
+  margin-top: 4px;
+  font-weight: 600;
+}
+
+.server-error {
+  background: var(--color-error-bg);
+  color: var(--color-error);
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 26px;
+}
+
+.btn-submit {
+  flex: 1;
+  padding: 13px;
+  background: var(--gradient-btn);
+  color: var(--color-card);
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-submit:hover {
+  box-shadow: var(--gradient-btn-hover);
+  transform: translateY(-1px);
+}
+
+.btn-goback {
+  flex: 1;
+  padding: 13px;
+  background: var(--color-card);
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-goback:hover {
+  background: #f0fdfa;
+  transform: translateY(-1px);
+}

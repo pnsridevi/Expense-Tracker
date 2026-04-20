@@ -1,0 +1,79 @@
+/* ============================================
+   GLOBAL THEME — Expense Tracker
+   Import this once in main.jsx
+   All pages use these variables
+   ============================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
+
+:root {
+  /* ── Palette ── */
+  --color-primary: #007779;
+  --color-primary-mid: #00809d;
+  --color-blue: #0086bd;
+  --color-blue-light: #4d88d3;
+  --color-purple: #9486d8;
+
+  /* ── Backgrounds ── */
+  --color-bg: #f7fafc;
+  --color-card: #ffffff;
+  --color-input-bg: #f7fafc;
+  --color-page-grad: linear-gradient(160deg, #f0fdfa 0%, #e0f2fe 100%);
+
+  /* ── Borders ── */
+  --color-border: #dde8f5;
+  --color-border-focus: #007779;
+  --color-border-light: #ebebeb;
+
+  /* ── Text ── */
+  --color-text-heading: #007779;
+  --color-text-body: #00809d;
+  --color-text-muted: #4d88d3;
+  --color-text-faint: #b0c8d8;
+  --color-text-dark: #0f172a;
+  --color-text-mid: #475569;
+  --color-error: #e05252;
+  --color-error-bg: #fff1f2;
+
+  /* ── Gradients ── */
+  --gradient-main: linear-gradient(135deg, #007779, #9486d8);
+  --gradient-btn: linear-gradient(135deg, #007779, #0086bd);
+  --gradient-btn-hover: 0 6px 20px rgba(0, 119, 121, 0.35);
+  --gradient-header: linear-gradient(
+    135deg,
+    #0f4c75 0%,
+    #1b6ca8 50%,
+    #0d9488 100%
+  );
+  --gradient-card-1: linear-gradient(90deg, #007779, #00809d);
+  --gradient-card-2: linear-gradient(90deg, #0086bd, #4d88d3);
+  --gradient-card-3: linear-gradient(90deg, #4d88d3, #9486d8);
+
+  /* ── Radii ── */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 20px;
+
+  /* ── Shadows ── */
+  --shadow-card: 0 4px 6px rgba(0, 0, 0, 0.04), 0 20px 50px rgba(0, 0, 0, 0.1);
+  --shadow-focus: 0 0 0 3px rgba(0, 119, 121, 0.12);
+}
+
+/* ── Base reset ── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text-body);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
